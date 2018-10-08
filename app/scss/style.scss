@@ -1,0 +1,25 @@
+@import 'vendors/fontawesome';
+@import 'vendors/solid';
+@import 'vendors/brands';
+@import 'vendors/regular';
+
+@import 'base/normalize';
+@import 'base/typography';
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'components/scrollTop';
+
+@import 'layout/container';
+@import 'layout/grid';
+@import 'layout/body';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/introduction';
+@import 'layout/technologies';
+@import 'layout/quotation';
+@import 'layout/projects';
+@import 'layout/contact';
+@import 'layout/mapa';
+@import 'layout/footer';

@@ -1,0 +1,37 @@
+@mixin slantBottom($rotate) {
+    position: absolute;
+    background: #f3f0eb none repeat scroll 0 0;
+    background-image: none;
+    bottom: 0;
+    content: "";
+    height: 208px;
+    left: 0;
+    margin: 0 -10px -132px;
+    right: 0;
+    -webkit-transform: rotate($rotate);
+    transform: rotate($rotate);
+    z-index: 1;
+    background-image: $background-image-texture;
+}
+
+@mixin slantTop($rotate) {
+    position: absolute;
+    background: #f3f0eb none repeat scroll 0 0;
+    background-image: none;
+    top: -120px;
+    content: "";
+    height: 208px;
+    left: 0;
+    margin: 0 -10px -132px;
+    right: 0;
+    -webkit-transform: rotate($rotate);
+    transform: rotate($rotate);
+    z-index: 1;
+    background-image: $background-image-texture;
+}
+
+@mixin header($size) {
+    text-align: center;
+    font-family: 'latolight';
+    font-size: $size;
+}

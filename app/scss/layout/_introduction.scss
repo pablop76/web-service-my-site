@@ -1,0 +1,32 @@
+.introduction {
+    position: relative;
+    z-index: 3;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1170px;
+
+    &__header {
+        text-align: center;
+        font-family: 'latomedium';
+        @include header($header-h2);
+        color: $header-color-brown;
+        padding-top: $padding-top-header;
+
+        &_thin {
+            font-family: 'latothin';
+            font-weight: 100;
+        }
+    }
+
+    &__item {
+        line-height: 160%;
+    }
+}
+
+@media (min-width: 768px) {
+    .introduction {
+        &__header {
+            @include header($header-h2 * 1.5);
+        }
+    }
+}

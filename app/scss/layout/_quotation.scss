@@ -1,0 +1,51 @@
+.quotation {
+    position: relative;
+    background-color: $background-color-brown;
+    color: #fff;
+    padding-bottom: 20px;
+    text-align: left;
+    z-index: 0;
+    
+    &::after {
+        @include slantTop(-2.45deg);
+        background-image: none;
+        background-color: $background-color-brown;
+        top: -40px;
+        z-index: -1;
+    }
+
+    &__item-img {
+        max-width: 265px;
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    &__item-cite {
+        margin: 0 40px;
+        font-size: 1.5em;
+    }
+
+    &__item-blockquote {
+        font-size: 1.1em;
+
+        &::before {
+            color: rgba(243, 240, 235, 1);
+            font-family: html;
+            content: "”";
+            display: block;
+            font-size: 8rem;
+            height: 100px;
+        }
+
+        &::after {
+            color: rgba(243, 240, 235, 1);
+            font-family: html;
+            content: "”";
+            margin-left: 90%;
+            display: block;
+            font-size: 8rem;
+            height: 100px;
+        }
+    }
+}

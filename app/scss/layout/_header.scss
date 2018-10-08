@@ -1,0 +1,83 @@
+.header {
+    position: relative;
+    background-color: #000;
+    background-image: url(../../dist/images/baner.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 0;
+    padding-bottom: 45%;
+    color: #fff;
+    min-height: 700px;
+
+    &::before {
+        @include slantBottom(-2.45deg);
+    }
+
+    &__logo {
+        position: absolute;
+        left: 5%;
+        top: 7%;
+        @include header($header-h1);
+        font-family: 'latolight';
+        letter-spacing: 2px;
+        line-height: .8;
+        text-align: left;
+
+        &_thin {
+            padding: 0;
+            margin: 0;
+            font-family: 'latothin';
+            text-align: left;
+            letter-spacing: 4px;
+            font-size: 1.5em;
+        }
+    }
+
+    &__slogan {
+        position: absolute;
+        @include header($header-h2);
+        top: 45%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: 'latothin';
+        text-shadow: 1px 1px 1px rgba(15, 15, 15, 1);
+        line-height: 1.1;
+        letter-spacing: 2px;
+
+        &-item {
+            margin: 0;
+            font-weight: 100;
+            letter-spacing: 3px;
+
+            &_design {
+                -webkit-text-fill-color: transparent;
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(.4, #fec942), color-stop(.48, #fd4f20), color-stop(.56, #69f0b2), color-stop(.65, #3685e7), color-stop(1, #fff));
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                text-shadow: 0 0 20px #fff;
+                font-family: 'latolight';
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        &__logo {
+            @include header($header-h1 * 1.5);
+            top: 3%;
+            line-height: .5;
+        }
+
+        &__slogan {
+            @include header($header-h2 * 2);
+            font-family: 'latothin';
+        }
+    }
+}

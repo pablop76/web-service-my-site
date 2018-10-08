@@ -1,0 +1,20 @@
+#scrollTop {
+    position: fixed;
+    z-index: 99999;
+    bottom: 20px;
+    right: 30px;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #241d1c;
+    background-color: rgba(255, 255, 255, .4);
+    text-decoration: none;
+
+    &::before {
+        content: '↑';
+        line-height: 40px;
+        color: #241d1c;
+        font-size: 2em;
+        margin-left: 17px;
+    }
+}

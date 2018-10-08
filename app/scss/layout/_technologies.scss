@@ -1,0 +1,56 @@
+.technologies {
+    display: block;
+    position: relative;
+    background-color: #000;
+    background-image: url(../images/backgroundLogo.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 150px;
+    padding-top: 10%;
+
+    &::before {
+        @include slantTop(2.45deg);
+    }
+
+    &__header {
+        @include header($header-h2);
+        margin-top: 90px;
+
+        &_thin {
+            font-family: 'latothin';
+            font-weight: 100;
+        }
+
+        & h2 {
+            padding-top: 100px;
+        }
+    }
+
+    &__item-header {
+        @include header($header-h3);
+    }
+
+    &__item {
+        text-align: left;
+        line-height: 130%;
+    }
+}
+
+@media (min-width: 768px) {
+    .technologies {
+        &__header {
+            padding-top: $padding-top-header;
+            margin-top: 0;
+            @include header($header-h2 *1.5);
+        }
+        & h2{
+            padding-top: 0;
+        }
+    }
+}
