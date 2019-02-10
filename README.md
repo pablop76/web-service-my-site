@@ -17,8 +17,6 @@
  
  * GitHub
  
- * Gulp
- 
 ## Screenshots
 
  [DEMO](http://www.web-service.com.pl/)
